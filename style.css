@@ -1,0 +1,262 @@
+:root{
+    /*PALETA*/
+    --color-primario:#072618;
+    --color-secundario:#557338;
+    --color-terciario:#4A5B8C;
+
+    --color-opcional:#F26A4B;
+    --color-alternativo:#BF5A75;
+}
+
+@font-face {
+    font-family: Sketch3D;
+    src: url('./Sketch3D.otf');
+}
+
+/* Etiquetas de estructura */
+body{
+    background: linear-gradient(10deg, var(--color-secundario), var(--color-primario));
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    min-width: 100%;
+    min-height: 100vh; 
+    grid-template-rows: auto 1fr auto;
+}
+
+
+header{
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 25px;
+}
+
+
+footer{
+    color: var(--color-primario); 
+    text-align: center;
+    font-size: xx-small;
+}
+
+/* Etiquetas de cabecera */
+
+h1{
+    font-family: "Sketch3D", Helvetica, sans-serif;
+    font-size: 3.5rem;
+}
+h1+p{
+    font-style: italic;
+}
+
+/* Etiquetas de componente Carousell Y MAIN*/
+
+.card{
+    width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+.contenedor-imagen{
+    width: 50%;
+    border-radius: 0px;
+    border: 0px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+}
+.card-img{
+    border-radius: 10px;
+    border: 0px;
+    height: auto;
+    width: auto;
+    max-height: 350px;
+    
+}
+.card-body{
+    width: 50%;
+    border-radius: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: transparent;
+}
+.card-title{
+    color: var(--color-opcional);
+    font-size: 2.5rem;
+    font-family: "Sketch3D", Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.info{
+    color: var(--color-alternativo);
+}
+.card-text{
+    padding-bottom: 30px;
+}
+.btn{
+    margin: auto;
+    width: 30%;
+    background-color: #557338;
+    color:var(--color-primario);
+    font-weight: bold;
+}
+.carousel{
+    width: 100%;
+    
+}
+.carousel-inner{
+    width: 100%;
+    
+}
+li{
+    list-style: none;
+}
+.frase{
+    color: var(--color-opcional);
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5rem;
+    font-family: "Sketch3D", Helvetica, sans-serif;
+}
+/*responsive*/
+.vResponsive{
+    display: none;
+}
+/*de footer*/
+.patas{
+    display: flex;
+    justify-content: center;
+}
+#patitas{ 
+    opacity:0.4;
+    width: 90%;
+}
+
+/* Media query */
+
+@media only screen and (max-width: 768px) {
+/* Etiquetas de cabecera */
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "Sketch3D", Helvetica, sans-serif;
+    font-size: 2rem;
+}
+h1+p{
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+/* Etiquetas de componente Carousell Y MAIN*/
+.raiz{
+
+    margin: 0px;
+    padding: 0px; 
+    text-align: center;
+
+}
+.card{
+    width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.contenedor-imagen{
+    max-width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+}
+.card-img{
+    border-radius: 5%;
+    border: 0px;
+    height: auto;
+    width: auto;
+    max-height: 350px;
+    
+}
+.card-body{
+    width: 100%;
+    border-radius: 0px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: transparent;
+    align-self: center;
+    justify-content: center;
+}
+.ctitulo{
+    display: none;
+}
+
+.card-title{
+    width: 100%;
+    color: var(--color-opcional);
+    font-size: 2.5rem;
+    font-family: "Sketch3D", Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.info{
+    color: var(--color-alternativo);
+    text-align: center;
+}
+
+.card-text{
+    padding-bottom: 30px;
+    text-align: center;
+    align-self: center;
+}
+.btn{
+    margin: auto;
+    width: 80%;
+    background-color: #557338;
+    color:var(--color-primario);
+    font-weight: bold;
+}
+.carousel{
+    width: 100%;
+    
+}
+.carousel-inner{
+    width: 100%;
+    
+}
+ul{
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+.frase{
+    color: var(--color-opcional);
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-family: "Sketch3D", Helvetica, sans-serif;
+}
+
+/*sobre responsive*/
+.vResponsive{
+    display: block;
+}
+
+/*de footer*/
+
+#patitas{
+    display: none;
+}
+}
